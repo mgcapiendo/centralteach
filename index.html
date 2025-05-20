@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CentralTeach - ABA Digital Tools</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Left Sidebar -->
+        <div class="sidebar">
+            <div class="program-menu">
+                <h2>Program Menu</h2>
+                <div class="search-box">
+                    <input type="text" placeholder="Search Programs...">
+                </div>
+                <div class="menu-divider"></div>
+                
+                <!-- Program List -->
+                <div class="program-list">
+                    <div class="program-item">
+                        <span class="star-icon">★</span>
+                        <div class="program-details">
+                            <h3>Tacting Programs</h3>
+                            <p>Help clients name and describe what they see.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="program-item">
+                        <span class="star-icon">★</span>
+                        <div class="program-details">
+                            <h3>Receptive ID Programs</h3>
+                            <p>Practice finding specific items among choices.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="program-item">
+                        <span class="star-icon">★</span>
+                        <div class="program-details">
+                            <h3>Safety</h3>
+                            <p>Teach helpful safety awareness skills.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="program-item">
+                        <span class="star-icon">★</span>
+                        <div class="program-details">
+                            <h3>First/Then</h3>
+                            <p>Show step-by-step activities with rewards.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="program-item">
+                        <span class="star-icon">★</span>
+                        <div class="program-details">
+                            <h3>Visual Schedule</h3>
+                            <p>Create easy-to-follow picture schedules.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Main Content Area -->
+        <div class="main-content">
+            <!-- Program Tabs -->
+            <div class="program-tabs">
+                <!-- Tabs will be added here dynamically when programs are configured -->
+            </div>
+            
+            <!-- Active Program Content -->
+            <div class="program-content">
+                <div id="empty-program-message" style="text-align: center; padding: 50px 20px;">
+                    <h2>No Active Programs</h2>
+                    <p style="margin-top: 20px; color: #666;">Select a program from the menu on the left to get started.</p>
+                    <p style="margin-top: 10px; color: #666;">Configure and add programs to your queue to begin your session.</p>
+                </div>
+                
+                <div id="program-display" style="display: none;">
+                    <div class="prompt-text"></div>
+                    
+                    <div class="stimulus-display">
+                        <!-- Program content will be dynamically inserted here -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Stimulus Selection Modal -->
+    <div class="modal" id="stimulusModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Tacting</h2>
+                <span class="close-modal">&times;</span>
+            </div>
+            <div class="modal-body">
+                <div class="field-size-selector">
+                    <span>Field Size: </span>
+                    <input type="number" min="1" max="6" value="2">
+                </div>
+                
+                <div class="search-icons">
+                    <input type="text" placeholder="Search icon menu...">
+                </div>
+                
+                <div class="icon-grid">
+                    <div class="icon-item">
+                        <img src="assets/Food/apple.png" alt="Apple">
+                    </div>
+                    <div class="icon-item">
+                        <img src="assets/Food/banana.png" alt="Banana">
+                    </div>
+                    <div class="icon-item">
+                        <img src="assets/Everyday/book.png" alt="Book">
+                    </div>
+                    <div class="icon-item">
+                        <img src="assets/Transportation/bus.webp" alt="Bus">
+                    </div>
+                    <div class="icon-item">
+                        <img src="assets/Transportation/car.webp" alt="Car">
+                    </div>
+                    <div class="icon-item">
+                        <img src="assets/Animals/cat.png" alt="Cat">
+                    </div>
+                    <div class="icon-item">
+                        <img src="assets/Everyday/chair.webp" alt="Chair">
+                    </div>
+                    <div class="icon-item">
+                        <img src="assets/Food/cookie.png" alt="Cookie">
+                    </div>
+                    <div class="icon-item">
+                        <img src="assets/Everyday/cup.png" alt="Cup">
+                    </div>
+                    <div class="icon-item">
+                        <img src="assets/Animals/dog.png" alt="Dog">
+                    </div>
+                    <div class="icon-item">
+                        <img src="assets/Emotions/happy.png" alt="Happy face">
+                    </div>
+                    <div class="icon-item">
+                        <img src="assets/Clothing/hat.png" alt="Hat">
+                    </div>
+                    <div class="icon-item">
+                        <img src="assets/Transportation/plane.png" alt="Airplane">
+                    </div>
+                    <div class="icon-item">
+                        <img src="assets/Emotions/sad.png" alt="Sad face">
+                    </div>
+                    <div class="icon-item">
+                        <img src="assets/Clothing/shirt.webp" alt="Shirt">
+                    </div>
+                    <div class="icon-item">
+                        <img src="assets/Clothing/shoes.png" alt="Shoes">
+                    </div>
+                    <div class="icon-item">
+                        <img src="assets/Everyday/table.webp" alt="Table">
+                    </div>
+                </div>
+                
+                <div class="stimulus-controls">
+                    <button class="select-target-btn">Select Target Stimulus</button>
+                    <button class="done-btn">Done</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="debug.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
