@@ -1,0 +1,35 @@
+<html>
+<body>
+<script>
+async function convertSvgToPng() {
+  const svgs = ['apple', 'hat', 'cat', 'banana', 'house', 'tree', 'fish', 'hand', 'eye'];
+  
+  for (const svg of svgs) {
+    const response = await fetch();
+    const svgText = await response.text();
+    
+    // Create a temporary img element
+    const img = document.createElement('img');
+    img.src = 'data:image/svg+xml;base64,' + btoa(svgText);
+    
+    document.body.appendChild(img);
+    img.onload = function() {
+      // Create canvas to convert to PNG
+      const canvas = document.createElement('canvas');
+      canvas.width = 200;
+      canvas.height = 200;
+      const ctx = canvas.getContext('2d');
+      ctx.drawImage(img, 0, 0);
+      
+      // Output PNG data URL
+      console.log(, canvas.toDataURL('image/png'));
+      document.body.appendChild(document.createTextNode(`.png created`));
+      document.body.appendChild(document.createElement('br'));
+    };
+  }
+}
+
+convertSvgToPng();
+</script>
+</body>
+</html>
